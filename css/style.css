@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --main-color: #07a081;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.bg-main-color {
+  background-color: var(--main-color) !important;
+}
+
+/*Navbar*/
+.navbar-nav .nav-item a {
+  font-weight: 600;
+  margin-right: 10px;
+}
+.navbar-nav .nav-item.active a {
+  color: var(--main-color) !important;
+}
+
+#lblCartCount {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+/*Form search bar*/
+form {
+  color: #555;
+  display: flex;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 25px;
+  width: 400px;
+}
+
+input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  width: 100%;
+}
+
+input[type="search"]::placeholder {
+  color: #bbb;
+}
+
+button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button[type="submit"]:hover {
+  opacity: 1;
+}
+
+button[type="submit"]:focus,
+input[type="search"]:focus {
+  box-shadow: 0 0 3px 0 #1183d6;
+  border-color: #1183d6;
+  outline: none;
+}
+
+/*Slider*/
+#slider {
+  position: relative;
+  padding: 8em 0 2em 0;
+  & main {
+    position: absolute;
+    margin: 0 0 0 5em;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  & aside {
+    position: absolute;
+    top: 3em;
+    right: 100px;
+  }
+  & .slider-img {
+    position: absolute;
+  }
+  & .slider-img.img-1 {
+    left: 45%;
+    top: 15%;
+  }
+  & .slider-img.img-2 {
+    left: 50.5%;
+  }
+  & .slider-img.img-3 {
+    left: 47%;
+    top: 35%;
+  }
+  & .slider-img.img-4 {
+    left: 37.5%;
+    top: 64%;
+  }
+}
+
+/*Section - Shop by pet*/
+#shop-by-pet {
+  & .box-item {
+    position: relative;
+    & .item {
+      position: absolute;
+      left: 2em;
+      top: 10px;
+    }
+  }
+}
+
+/*Section - Contact*/
+#contact {
+  position: relative;
+  height: 70vh;
+  & .contact-item {
+    position: absolute;
+    padding: 10em 0 5em 0;
+  }
+  & .contact-item.item-1 {
+    left: 11%;
+  }
+  & .contact-item.item-2 {
+    left: 10%;
+  }
+  & .contact-item.item-3 {
+    left: 23%;
+    top: -12%;
+  }
+  & .contact-item.item-4 {
+    left: 28%;
+    margin-top: 12%;
+  }
+  & .contact-item.item-5 {
+    left: 43%;
+    margin-top: 14%;
+  }
+  & .contact-info {
+    position: absolute;
+    right: 15%;
+    top: 30%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  & .socials {
+    position: absolute;
+    right: 15%;
+    top: 80%;
+  }
+}
+
+/*Section - Discount*/
+#discount {
+  height: 90vh;
+  position: relative;
+  & .banner {
+    height: 20vh;
+    position: relative;
+    & .discount-mark {
+      position: absolute;
+      top: -16%;
+      left: 5%;
+    }
+    & .images .discount-img-1 {
+      position: absolute;
+      right: 16%;
+      bottom: 46%;
+    }
+    & .images .discount-img-2 {
+      position: absolute;
+      right: 16%;
+      bottom: 20%;
+    }
+    & .images .discount-img-3 {
+      position: absolute;
+      right: 10%;
+      bottom: 38%;
+    }
+  }
+  & .hot-offer {
+    & .hot-offer-img-1 {
+      position: absolute;
+      left: 15%;
+      bottom: 35%;
+      width: 30%;
+      height: auto;
+    }
+    & .hot-offer-img-2 {
+      position: absolute;
+      left: 50%;
+      bottom: 25%;
+      width: 30%;
+      height: auto;
+    }
+    & .hot-offer-img-3 {
+      position: absolute;
+      left: 35%;
+      bottom: 5%;
+    }
+    & .hot-offer-img-4 {
+      position: absolute;
+      right: 30%;
+      bottom: 49%;
+    }
+    & .hot-offer-img-5 {
+      position: absolute;
+      left: 15%;
+      bottom: 20%;
+    }
+    & .hot-offer-img-6 {
+      position: absolute;
+      right: 25%;
+      bottom: 15%;
+    }
+    & .hot-offer-text {
+      position: absolute;
+      right: 30.7%;
+      bottom: 55%;
+    }
+  }
+}
+
+/* Footer */
+#footer {
+  .list {
+    list-style: none;
+    line-height: 3em;
+  }
+}

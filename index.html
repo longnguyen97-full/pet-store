@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pucci Mart Landing Page</title>
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap: CSS -->
     <link
       rel="stylesheet"
@@ -52,6 +60,371 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div>
+      <!-- Header -->
+      <header class="px-5">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="navbar-brand" href="#"
+                  ><img src="./images/logo.png" alt="logo" />&nbsp;&nbsp;&nbsp;
+                  PucciMart</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Party Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <form>
+              <input type="search" placeholder="Search for products..." />
+              <button type="submit"></button>
+            </form>
+            <div class="icons mx-5">
+              <img class="mx-1" src="./images/icon-cart.png" alt="icon" />
+              <span class="badge badge-warning" id="lblCartCount"> 0 </span>
+              <img class="mx-1" src="./images/icon-bars.png" alt="icon" />
+              <img class="mx-1" src="./images/icon-user.png" alt="icon" />
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+        <!-- Slider -->
+        <div id="slider">
+          <main class="flex-container">
+            <div class="title">
+              <h1 class="font-weight-bold">Love your plants</h1>
+              <h1 class="font-weight-bold">Take care of yourself</h1>
+            </div>
+            <h5 class="font-weight-bold">5% of every purchase helps rescues</h5>
+            <img src="./images/shop-now.png" alt="shop-now" />
+            <img src="./images/social-icons.png" alt="social-icons" />
+          </main>
+          <aside>
+            <img src="./images/slider.png" alt="sliders" />
+          </aside>
+          <div class="flex-container justify-content-between">
+            <img src="./images/slider-1.png" alt="sliders" />
+            <img src="./images/slider-2.png" alt="sliders" />
+            <img src="./images/slider-5.png" alt="sliders" />
+            <img
+              class="slider-img img-1"
+              src="./images/slider-3.png"
+              alt="sliders"
+            />
+            <img
+              class="slider-img img-2"
+              src="./images/slider-3.png"
+              alt="sliders"
+            />
+            <img
+              class="slider-img img-3"
+              src="./images/slider-3.png"
+              alt="sliders"
+            />
+            <img
+              class="slider-img img-4"
+              src="./images/slider-4.png"
+              alt="sliders"
+            />
+          </div>
+        </div>
+        <!-- End Slider -->
+      </header>
+      <!-- End Header -->
+
+      <!-- Main Content -->
+      <main class="py-5">
+        <!-- Section 1 -->
+        <section id="shop-by-pet" class="text-center py-5">
+          <h2 class="font-weight-bold">Shop By Pet</h2>
+          <p>
+            Shop the latest high-end designer products for your pups at our
+            luxury dog boutique!
+          </p>
+          <div class="flex-container justify-content-center">
+            <div class="box-item">
+              <img class="item" src="./images/cat.png" alt="item" />
+              <img src="./images/shop-by-pet-box-item.png" alt="box-item" />
+            </div>
+            <div class="box-item">
+              <img class="item" src="./images/bird.png" alt="item" />
+              <img src="./images/shop-by-pet-box-item.png" alt="box-item" />
+            </div>
+            <div class="box-item">
+              <img class="item" src="./images/dog.png" alt="item" />
+              <img src="./images/shop-by-pet-box-item.png" alt="box-item" />
+            </div>
+            <div class="box-item">
+              <img class="item" src="./images/fish.png" alt="item" />
+              <img src="./images/shop-by-pet-box-item.png" alt="box-item" />
+            </div>
+            <div class="box-item">
+              <img class="item" src="./images/rabbit.png" alt="item" />
+              <img src="./images/shop-by-pet-box-item.png" alt="box-item" />
+            </div>
+          </div>
+        </section>
+        <!-- Section 2 -->
+        <section id="all-pet" class="text-center py-5">
+          <h2 class="font-weight-bold">All Pet</h2>
+          <p>
+            Shop the latest high-end designer products for your pups at our
+            luxury dog boutique!
+          </p>
+          <div class="row mt-5">
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-1.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-2.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-3.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-4.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-5.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-6.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-7.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card-item">
+                <img src="./images/card-8.png" alt="card" />
+                <h5 class="title mt-2 font-weight-bold">Lucky 2</h5>
+                <p class="description">Male non-sporting dog</p>
+                <p class="price">$269 <s>$300</s></p>
+              </div>
+            </div>
+          </div>
+          <img src="./images/pagination-btn.png" alt="pagination-btn" />
+        </section>
+        <!-- Section 2 -->
+        <section id="contact" class="py-5">
+          <img
+            class="contact-item item-1"
+            src="./images/contact-1.png"
+            alt="contact"
+          />
+          <img
+            class="contact-item item-2"
+            src="./images/contact-2.png"
+            alt="contact"
+          />
+          <img
+            class="contact-item item-3"
+            src="./images/contact-3.png"
+            alt="contact"
+          />
+          <img
+            class="contact-item item-4"
+            src="./images/Pucci.png"
+            alt="contact"
+          />
+          <img
+            class="contact-item item-5"
+            src="./images/Mart.png"
+            alt="contact"
+          />
+          <div class="contact-info flex-container">
+            <h3 class="font-weight-bold">Subscribe for updates</h3>
+            <div class="contact-form">
+              <img src="./images/contact-input.png" alt="contact" />
+              <img src="./images/contact-button.png" alt="contact" />
+            </div>
+            <h4 class="font-weight-bold">contact us: info@pucciMart.com</h4>
+          </div>
+          <img
+            src="./images/social-icons.png"
+            alt="social-icons"
+            class="socials"
+          />
+        </section>
+        <!-- Section 4 -->
+        <section id="discount" class="text-center py-5">
+          <div class="banner bg-main-color">
+            <img
+              class="discount-mark"
+              src="./images/discount-1.png"
+              alt="discount"
+            />
+            <div class="content pt-5">
+              <h2 class="text-white font-weight-bold">
+                Discount up to 50% Only this month.
+              </h2>
+              <img src="./images/discount-shop-now.png" alt="discount" />
+            </div>
+            <div class="images">
+              <img
+                class="discount-img-1"
+                src="./images/discount-2.png"
+                alt="discount"
+              />
+              <img
+                class="discount-img-2"
+                src="./images/discount-3.png"
+                alt="discount"
+              />
+              <img
+                class="discount-img-3"
+                src="./images/discount-3.png"
+                alt="discount"
+              />
+            </div>
+          </div>
+          <div class="hot-offer">
+            <img
+              class="hot-offer-img-1"
+              src="./images/Pucci.png"
+              alt="hot-offer"
+            />
+            <img
+              class="hot-offer-img-2"
+              src="./images/Mart.png"
+              alt="hot-offer"
+            />
+            <img
+              class="hot-offer-img-3"
+              src="./images/hot-offer-1.png"
+              alt="hot-offer"
+            />
+            <img
+              class="hot-offer-img-4"
+              src="./images/hot-offer-2.png"
+              alt="hot-offer"
+            />
+            <h3 class="hot-offer-text text-white font-weight-bold">
+              Hot Offer
+            </h3>
+            <div class="hot-offer-img-5">
+              <img src="./images/hot-offer-3.png" alt="hot-offer" />
+              <span>(2698)</span>
+              <div class="price mt-3">
+                <h5 class="text-danger font-weight-bold text-left">$169.00</h5>
+                <h5 class="font-weight-bold text-right"><s>$169.00</s></h5>
+              </div>
+            </div>
+            <img
+              class="hot-offer-img-6"
+              src="./images/shop-now.png"
+              alt="hot-offer"
+            />
+          </div>
+        </section>
+        <!-- Section 5 -->
+        <section id="service" class="text-center py-5">
+          <h2 class="font-weight-bold">Discount up to 50% Only this month.</h2>
+          <img src="./images/divide.png" alt="divide" />
+          <div class="services flex-container justify-content-around">
+            <img src="./images/service-1.png" alt="service" />
+            <img src="./images/service-2.png" alt="service" />
+            <img src="./images/service-3.png" alt="service" />
+          </div>
+        </section>
+      </main>
+      <!-- End Main Content -->
+
+      <!-- Footer -->
+      <footer id="footer" class="py-5 text-center">
+        <div class="bottom-side flex-container justify-content-around">
+          <div class="about text-left">
+            <h3 class="font-weight-bold">About</h3>
+            <ul class="list">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms and Condition</a></li>
+            </ul>
+          </div>
+          <div class="support text-left">
+            <h3 class="font-weight-bold">Support</h3>
+            <ul class="list">
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Help/FAQ</a></li>
+            </ul>
+          </div>
+          <div class="contact-us text-left">
+            <h3 class="font-weight-bold">Contact Us</h3>
+            <ul class="list">
+              <li><a href="#">Call Us: +123 456 789 00</a></li>
+              <li><a href="#">Email Us: ghorerbazarbd.com@gmail.com</a></li>
+              <li>
+                <a href="#"
+                  ><img src="./images/app-download.png" alt="download"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="./images/divide-2.png" alt="divide" />
+        <div class="end-footer flex-container justify-content-around">
+          <div class="left">All rights reserved@Puccimart</div>
+          <div class="right">Terms and Condition</div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </div>
     <!-- JS -->
     <script src="js/script.js"></script>
   </body>
