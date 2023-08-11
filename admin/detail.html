@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pucci Mart Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <h2 class="text-center text-muted">Pet Detail</h2>
+        <div class="form-group row">
+          <label class="col-sm-3" for="input-name">Name</label>
+          <input
+            disabled
+            type="text"
+            class="form-control col-sm-9"
+            id="input-name"
+          />
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3" for="input-description">description</label>
+          <textarea
+            disabled
+            class="form-control col-sm-9"
+            id="input-description"
+            cols="15"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3" for="input-image">image</label>
+          <img id="input-image" src="" alt="image" />
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3" for="input-price">price</label>
+          <input
+            disabled
+            type="text"
+            class="form-control col-sm-9"
+            id="input-price"
+          />
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3" for="input-promotionPrice"
+            >promotionPrice</label
+          >
+          <input
+            disabled
+            type="text"
+            class="form-control col-sm-9"
+            id="input-promotionPrice"
+          />
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3" for="input-createdAt">Created At</label>
+          <input
+            disabled
+            type="text"
+            class="form-control col-sm-9"
+            id="input-createdAt"
+          />
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3" for="input-updatedAt">Updated At</label>
+          <input
+            disabled
+            type="text"
+            class="form-control col-sm-9"
+            id="input-updatedAt"
+          />
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="location.href='index.html';"
+        >
+          Back
+        </button>
+      </form>
+    </div>
+    <script>
+      "use strict";
+      /*** REGION 1 - Global variables - Vùng khai báo biến, hằng số, tham số TOÀN CỤC */
+      const gREQUEST_STATUS_OK = 200;
+      const gREQUEST_CREATE_OK = 201; // status 201 là tạo mới thành công
+      const gREQUEST_READY_STATUS_FINISH_AND_OK = 4;
+
+      var gBASE_URL = "https://pucci-mart.onrender.com/api";
+
+      /*** REGION 2 - Vùng gán / thực thi sự kiện cho các elements */
+
+      /*** REGION 3 - Event handlers - Vùng khai báo các hàm xử lý sự kiện */
+      $(document).ready(function () {
+        // get data from query string
+        var vUrlString = window.location.href; //đường đẫn gọi đến trang
+        var vUrl = new URL(vUrlString);
+        // get parameters
+        // b1. collect data
+        let vId = vUrl.searchParams.get("id");
+        // b2. validate data
+        if (vId === "") {
+          alert("ID is empty");
+          window.location.href = "index.html";
+        }
+        // b3. call API
+        onGetPetByIdClick(vId);
+      });
+
+      /*** REGION 4 - Common funtions - Vùng khai báo hàm dùng chung trong toàn bộ chương trình*/
+      // API lấy thông tin Pet theo ID
+      function onGetPetByIdClick(paramId) {
+        $.ajax({
+          type: "get",
+          url: gBASE_URL + "/pets/" + paramId,
+          dataType: "json",
+          success: function (paramData) {
+            console.log(paramData);
+            renderContact(paramData);
+          },
+          error: function (error) {
+            console.log(error);
+          },
+        });
+      }
+
+      /*Renders*/
+      function renderContact(paramPet) {
+        // 1. collect fields
+        let vName = $("#input-name");
+        let vDescription = $("#input-description");
+        let vImage = $("#input-image");
+        let vPrice = $("#input-price");
+        let vPromotionPrice = $("#input-promotionPrice");
+        let vType = $("#input-type");
+        let vCreatedAt = $("#input-createdAt");
+        let vUpdatedAt = $("#input-updatedAt");
+        // 2. fill data to fields
+        vName.val(paramPet.name);
+        vDescription.val(paramPet.description);
+        vImage.attr("src", paramPet.imageUrl);
+        vPrice.val(paramPet.price);
+        vPromotionPrice.val(paramPet.promotionPrice);
+        vType.val(paramPet.type);
+        vCreatedAt.val(paramPet.createdAt);
+        vUpdatedAt.val(paramPet.updatedAt);
+      }
+    </script>
+  </body>
+</html>
